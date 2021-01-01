@@ -18,6 +18,8 @@ exports.onRenderBody = function({ setHeadComponents, setPostBodyComponents }) {
             <script src={withPrefix('js/init.js')}/>
             <script src={withPrefix('js/page-load.js')}/>
             <script src={withPrefix('js/page-unload.js')}/>
+            <script src={withPrefix('js/plugins.js')}/>
+            <script src={withPrefix('js/prism.js')} data-manual/>
             
         </React.Fragment>
     ]);

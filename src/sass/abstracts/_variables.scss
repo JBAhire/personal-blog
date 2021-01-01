@@ -5,7 +5,7 @@ $theme-styles: (
 	classic: (
 		fonts: (
 			serif: ('Lora', 'Lucida Bright', 'Lucidabright', 'Lucida Serif', Lucida, Georgia, serif),
-			sans-serif: ('Open Sans', Lato, sans-serif)
+			sans-serif: ('Work Sans', Lato, sans-serif)
 		),
 		colors: (
 			blue:  #7076f0,
@@ -38,13 +38,13 @@ $theme-styles: (
 );
 
 // Monospace font
-$font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !default;
+$font-family-monospace: "Liberation Mono","Courier New",monospace !default;
 
 
 // Colors
 
 // Primary color for the gray palette
-$color-primary:                        #45515e !default;
+$color-primary:                        #0FA3B1;
 
 // Base
 $color-body-text:                      #2c343c !default;
@@ -70,7 +70,7 @@ $color-hr-border:                      #eceef1 !default;
 
 // Buttons
 $color-btn-text:                       #fff !default;
-$color-btn-bg:                         $color-primary !default;
+$color-btn-bg:                         #0FA3B1;
 $color-btn-alt-text:                   #fff !default;
 $color-btn-alt-bg:                     #2c343c !default;
 $color-bold-btn-shadow:                #bfc7d0 !default;

@@ -1,115 +1,88 @@
 {
-    "description": "A \"do it yourself\" theme for Stackbit",
-    "layout": "boxed",
+    "description": "Open Source, Cloud Native, Distributed Tracing Platform",
     "style": "classic",
-    "palette": "green",
-    "mode": "light",
-    "base_font": "serif",
+    "palette": "violet",
+    "palettes": {
+        "blue": {
+            "sass": {
+                "accent1": "#00c6ff",
+                "accent2": "#0072ff"
+            }
+        },
+        "green": {
+            "sass": {
+                "accent1": "#12db5d",
+                "accent2": "#11998e"
+            }
+        },
+        "navy": {
+            "sass": {
+                "accent1": "#004e92",
+                "accent2": "#000428"
+            }
+        },
+        "violet": {
+            "sass": {
+                "accent1": "#0FA3B1",
+                "accent2": "#0FA3B1"
+            }
+        }
+    },
+    "mode": "dark",
+    "base_font": "sans-serif",
     "header": {
-        "title": "DIY",
-        "logo": "images/classic/logo.svg",
+        "title": "Jayesh Bapu Ahire",
+        "logo": "images/logo.png",
         "has_primary_nav": true,
         "primary_nav_links": [
+        ],
+        "has_secondary_nav": true,
+        "secondary_nav_links": [
             {
-                "label": "Features",
-                "url": "/features",
-                "style": "link"
-            },
-            {
-                "label": "Pricing",
-                "url": "/pricing",
-                "style": "link"
-            },
-            {
-                "label": "About",
-                "url": "/about",
-                "style": "link"
-            },
-            {
-                "label": "Blog",
+                "label": "Home",
                 "url": "/blog",
                 "style": "link"
             },
             {
-                "label": "Style Guide",
-                "url": "/style-guide",
-                "style": "link"
-            }
-        ],
-        "has_secondary_nav": true,
-        "secondary_nav_links": [
+                "label": "Dev.to",
+                "url": "https://dev.to/jbahire",
+                "style": "link",
+                "new_window": true
+            }, 
             {
-                "label": "Contact",
-                "url": "/contact",
-                "style": "link"
+                "url": "https://github.com/jbahire",
+                "style": "link",
+                "has_icon": true,
+                "icon": "github",
+                "icon_position": "center",
+                "new_window": true
             },
             {
-                "label": "Get Started",
-                "url": "/pricing",
-                "style": "primary"
+                "label": "YouTube",
+                "url": "https://www.youtube.com/channel/UC2nR0MkkCgew1cwV0TNBTQg",
+                "style": "link",
+                "has_icon": true,
+                "icon": "youtube",
+                "icon_position": "center",
+                "new_window": true
+            },
+            {
+                "label": "Twitter",
+                "url": "https://twitter.com/jayesh_Ahire1",
+                "style": "link",
+                "has_icon": true,
+                "icon": "twitter",
+                "icon_position": "center",
+                "new_window": true
             }
-        ],
-        "has_anncmnt": true,
-        "anncmnt_content": "Curabitur ac tellus mattis, tempor ipsum eu, eleifend sapien. **[Learn More](/pricing/)**",
-        "anncmnt_align": "left",
-        "anncmnt_is_home_only": true,
-        "anncmnt_has_close": true,
-        "anncmnt_id": "new-features"
+        ]
     },
     "footer": {
-        "logo": "images/classic/logo.svg",
-        "has_primary_nav": true,
-        "primary_nav_title": "Company",
-        "primary_nav_links": [
-            {
-                "label": "About",
-                "url": "/about",
-                "style": "link"
-            },
-            {
-                "label": "Style Guide",
-                "url": "/style-guide",
-                "style": "link"
-            }
-        ],
-        "has_secondary_nav": true,
-        "secondary_nav_title": "Blog",
-        "secondary_nav_links": [
-            {
-                "label": "News",
-                "url": "/blog/category/news",
-                "style": "link"
-            },
-            {
-                "label": "General",
-                "url": "/blog/category/general",
-                "style": "link"
-            },
-            {
-                "label": "Tutorials",
-                "url": "/blog/category/tutorials",
-                "style": "link"
-            }
-        ],
-        "has_tertiary_nav": true,
-        "tertiary_nav_title": "Legal",
-        "tertiary_nav_links": [
-            {
-                "label": "Terms & Conditions",
-                "url": "/terms-conditions",
-                "style": "link"
-            },
-            {
-                "label": "Privacy Policy",
-                "url": "/privacy-policy",
-                "style": "link"
-            }
-        ],
         "has_social": true,
         "social_links": [
             {
                 "label": "Twitter",
-                "url": "https://twitter.com/",
+                "url": "https://twitter.com/jayesh_Ahire1",
                 "style": "link",
                 "has_icon": true,
                 "icon": "twitter",
@@ -118,7 +91,7 @@
             },
             {
                 "label": "GitHub",
-                "url": "https://github.com/",
+                "url": "https://github.com/jbahire",
                 "style": "link",
                 "has_icon": true,
                 "icon": "github",
@@ -126,17 +99,8 @@
                 "new_window": true
             },
             {
-                "label": "LinkedIn",
-                "url": "https://www.linkedin.com/",
-                "style": "link",
-                "has_icon": true,
-                "icon": "linkedin",
-                "icon_position": "center",
-                "new_window": true
-            },
-            {
-                "label": "LinkedIn",
-                "url": "https://www.youtube.com/",
+                "label": "YouTube",
+                "url": "https://www.youtube.com/channel/UC2nR0MkkCgew1cwV0TNBTQg",
                 "style": "link",
                 "has_icon": true,
                 "icon": "youtube",
@@ -144,16 +108,18 @@
                 "new_window": true
             },
             {
-                "label": "LinkedIn",
-                "url": "https://vimeo.com/",
+                "label": "Instagram",
+                "url": "https://instagram.com/jayesh.ai",
                 "style": "link",
                 "has_icon": true,
-                "icon": "vimeo",
+                "icon": "instagram",
                 "icon_position": "center",
                 "new_window": true
             }
         ],
-        "content": "&copy; Stackbit. All rights reserved. This Jamstack site was created on <a href=\"https://www.stackbit.com\" target=\"_blank\" rel=\"noopener\">Stackbit</a>. Get yours <a href=\"https://app.stackbit.com/create?theme=diy\" target=\"_blank\" rel=\"noopener\">here</a>."
+        "content": "&copy;2020 Jayesh Bapu Ahire  ",
+        "links": [
+        ]
     },
-    "title": "Stackbit DIY Theme"
+    "title": "Jayesh Bapu Ahire"
 }

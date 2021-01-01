@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {classNames, toStyleObj, withPrefix, markdownify} from '../utils';
+import {classNames, toStyleObj, withPrefix, htmlToReact, markdownify} from '../utils';
 import SectionActions from './SectionActions';
 
 export default class CtaSection extends React.Component {
@@ -48,7 +48,7 @@ export default class CtaSection extends React.Component {
                 			{has_text && (
                 			<div className={classNames('cta__body', 'my-1', 'cell-12', {'cell-md-7': (is_horiz && has_actions) && (actions_width === 'fourty'), 'cell-md-6': (is_horiz && has_actions) && (actions_width === 'fifty'), 'cell-md-5': (is_horiz && has_actions) && (actions_width === 'sixty'), 'text-center': align_x === 'center', 'text-right': align_x === 'right'})}>
                 				{_.get(section, 'title', null) && (
-                				<h1 className="cta__title">{_.get(section, 'title', null)}</h1>
+                				<h1 className="cta__title">{htmlToReact(_.get(section, 'title', null))}</h1>
                 				)}
                 				{_.get(section, 'content', null) && (
                 				<div className="cta__copy">

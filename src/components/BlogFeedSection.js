@@ -19,7 +19,6 @@ export default class BlogFeedSection extends React.Component {
         let bg_img_repeat = _.get(section, 'background_image_repeat', null) || 'no-repeat';
         let section_author = false;
         let section_category = false;
-        let section_tag = false;
         let posts_all = getPages(this.props.pageContext.pages, '/blog');
         let posts_sorted = _.orderBy(posts_all, 'frontmatter.date', 'desc');
         let show_recent = _.get(section, 'show_recent', null);
@@ -30,9 +29,6 @@ export default class BlogFeedSection extends React.Component {
         }
         if (_.get(section, 'category', null)) {
              section_category = getData(this.props.pageContext.site.data, _.get(section, 'category', null));
-        }
-        if (_.get(section, 'tag', null)) {
-             section_tag = getData(this.props.pageContext.site.data, _.get(section, 'tag', null));
         }
         return (
             <section className={classNames('section', 'blog-feed', {'has-border': _.get(section, 'has_border', null), 'has-cover': _.get(section, 'background_image', null), 'bg-none': bg_color === 'none', 'bg-primary': bg_color === 'primary', 'bg-secondary': bg_color === 'secondary', 'pt-4': padding_top === 'small', 'pt-6': (padding_top === 'medium') || (padding_top === 'large'), 'pt-md-7': padding_top === 'large', 'pb-4': padding_bottom === 'small', 'pb-6': (padding_bottom === 'medium') || (padding_bottom === 'large'), 'pb-md-7': padding_bottom === 'large'})}>
@@ -52,18 +48,15 @@ export default class BlogFeedSection extends React.Component {
             	<div className="container">
             		<div className="grid">
             			{_.map(posts_sorted, (post, post_idx) => {
-            			    let is_post = false;
-            			    if ((_.get(post, 'frontmatter.template', null) === 'post')) {
-            			         is_post = true;
-            			    }
-            			    return (<React.Fragment key={post_idx + '.1'}>
-                				{(is_post && ((show_recent === false) || (post_count < recent_count))) && ((() => {
+            			    let is_post = _.get(post, 'frontmatter.template', null) === 'post';
+            			    return (
+                				(is_post && ((show_recent === false) || (post_count < recent_count))) && ((() => {
                 				     post_count = post_count + 1;
                 				    return (
-                    				<BlogFeedItemFilter key={post_idx} {...this.props} blog_feed_section={section} post_page={post} section_author={section_author} section_category={section_category} section_tag={section_tag} />
+                    				<BlogFeedItemFilter key={post_idx} {...this.props} blog_feed_section={section} post_page={post} section_author={section_author} section_category={section_category} />
                     				);
-                				})())}
-                			</React.Fragment>)
+                				})())
+                			)
             			})}
             		</div>
             	</div>

@@ -38,10 +38,9 @@ export default class Post extends React.Component {
             			)}
             			<header className={classNames('post__header', {'cell-12': image_pos !== 'top', 'cell-lg-5': image_pos !== 'top', 'order-lg-first': has_image && (image_pos === 'right')})}>
             				<div className="post__meta mb-2">
-            					{_.get(this.props, 'pageContext.frontmatter.categories', null) && (<React.Fragment>
+            					{_.get(this.props, 'pageContext.frontmatter.categories', null) && (
             						<BlogPostCategories {...this.props} categories={_.get(this.props, 'pageContext.frontmatter.categories', null)} container_class={'post__cat'} />
-            						<span className="post__meta-sep"> &middot; </span>
-            					</React.Fragment>)}
+            					)}
             					<span className="post__date"><time dateTime={moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%B %d, %Y')}</time></span>
             				</div>
             				<h1 className="post__title mt-0">{_.get(this.props, 'pageContext.frontmatter.title', null)}</h1>

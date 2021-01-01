@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {classNames, Link, withPrefix, htmlToReact} from '../utils';
+import {classNames, withPrefix, htmlToReact, Link} from '../utils';
 import FooterMenu from './FooterMenu';
 import Icon from './Icon';
 
@@ -27,9 +27,9 @@ export default class Footer extends React.Component {
                 		<div className="container">
                 			<div className={classNames('grid', {'justify-md-center': has_logo === false})}>
                 				{has_logo && (
-                				<Link className="site-footer__logo cell-12 cell-md-5 my-4" to={withPrefix('/')}>
+                				<div className="site-footer__logo cell-12 cell-md-5 my-4">
                 					<img src={withPrefix(_.get(this.props, 'pageContext.site.siteMetadata.footer.logo', null))} alt={_.get(this.props, 'pageContext.site.siteMetadata.header.title', null)} />
-                				</Link>
+                				</div>
                 				)}
                 				{(_.get(this.props, 'pageContext.site.siteMetadata.footer.has_primary_nav', null) && _.get(this.props, 'pageContext.site.siteMetadata.footer.primary_nav_links', null)) && (
                 				<div className="site-footer__menu cell-12 cell-md my-3 my-md-4">
@@ -65,9 +65,7 @@ export default class Footer extends React.Component {
                 			<div className="grid items-center">
                 				{footer_content && (
                 				<div className={classNames('site-footer__copyright', 'cell-12', {'cell-sm': footer_social})}>
-                					{_.get(this.props, 'pageContext.site.siteMetadata.footer.content', null) && (
-                						<span>{htmlToReact(_.get(this.props, 'pageContext.site.siteMetadata.footer.content', null))}</span>
-                					)}
+                					{htmlToReact(_.get(this.props, 'pageContext.site.siteMetadata.footer.content', null))}
                 					{_.map(_.get(this.props, 'pageContext.site.siteMetadata.footer.links', null), (link, link_idx) => (
                 						<Link key={link_idx} to={withPrefix(_.get(link, 'url', null))} {...(_.get(link, 'new_window', null) ? ({target: '_blank', rel: 'noopener'}) : null)}>{_.get(link, 'label', null)}</Link>
                 					))}

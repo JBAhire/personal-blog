@@ -44,12 +44,9 @@ export default class BlogPostFeedItem extends React.Component {
                 			<div className={classNames('item__body', {'px-3': is_card, 'pb-3': is_card, 'pt-3': is_card && no_image, 'px-sm-4': is_card, 'pb-sm-4': is_card, 'pt-4': is_card && no_image})}>
                 				{(_.get(blog_feed_section, 'show_date', null) || show_categories) && (
                 				<div className="item__meta mb-1">
-                					{show_categories && (<React.Fragment>
+                					{show_categories && (
                 						<BlogPostCategories {...this.props} categories={_.get(post, 'frontmatter.categories', null)} container_class={'item__cat'} />
-                						{_.get(blog_feed_section, 'show_date', null) && (
-                							<span className="item__meta-sep"> &middot; </span>
-                						)}
-                					</React.Fragment>)}
+                					)}
                 					{_.get(blog_feed_section, 'show_date', null) && (
                 						<span className="item__date"><time dateTime={moment(_.get(post, 'frontmatter.date', null)).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(post, 'frontmatter.date', null)).strftime('%B %d, %Y')}</time></span>
                 					)}

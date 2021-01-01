@@ -1,0 +1,12 @@
+{
+    "name": "Jayesh Bapu Ahire",
+    "short_name": "Jayesh Bapu Ahire",
+    "icons": [{
+      "src": "/images/favicon/ht-favicon-16x16.png",
+      "type": "image/png"
+    }],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+  }
+  
